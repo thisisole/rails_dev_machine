@@ -1,4 +1,3 @@
 .vagrant
 environments/development/modules/
-my-private-key
-
+id_rsa

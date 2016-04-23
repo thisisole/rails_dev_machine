@@ -1,5 +1,5 @@
 class install_postgres(Array $databases, String $user) {
-  $password = 'thisismypassword'
+  $password = 'test'
 
   require developer
 

@@ -13,12 +13,12 @@ vagrant up
 ```
 -- linux --
 user: ole
-password: thisismypassword
+password: test
 home: /home/ole
 
 -- postgres --
 user: ole
-password: thisismypassword
+password: test
 ```
 
 ## Packages
