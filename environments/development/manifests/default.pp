@@ -6,9 +6,10 @@ node default {
     user => $user
   }
 
-  class { 'configure_vim': 
-    user => $user
-  }
+#currently not working :-(
+#  class { 'configure_vim': 
+#    user => $user
+#  }
 
   class { 'install_postgres':
     databases => $databases,

@@ -2,7 +2,7 @@ class developer(String $user) {
   user {
     $user: 
       ensure     => present,
-      password   => 'test',
+      password   => '$1$T0H0BNDf$QupBRZqrfKaMIZ5DY.mfy.',
       shell      => '/bin/bash',
       home       => "/home/${user}",
       managehome => true,
