@@ -3,7 +3,7 @@ cd ~/.vim/bundle && git clone git://github.com/altercation/vim-colors-solarized.
 git clone https://github.com/scrooloose/nerdtree.git &&
 git clone git://github.com/tpope/vim-rails.git && git clone git://github.com/tpope/vim-bundler.git &&
 git clone https://github.com/kien/ctrlp.vim.git &&
-git clone git://github.com/tpope/vim-endwise.git && 
+git clone git://github.com/tpope/vim-endwise.git &&
 git clone git://github.com/tpope/vim-commentary.git &&
 git clone https://github.com/vim-ruby/vim-ruby.git &&
 git clone https://github.com/ervandew/supertab.git &&
@@ -18,4 +18,4 @@ git clone https://github.com/garbas/vim-snipmate.git &&
 git clone https://github.com/honza/vim-snippets.git &&
 git clone https://github.com/elzr/vim-json.git &&
 git clone https://github.com/sjl/gundo.vim &&
-git clone https://github.com/leafgarland/typescript-vim.git 
+git clone https://github.com/leafgarland/typescript-vim.git
