@@ -15,7 +15,6 @@ node default {
     user => $user
   }
 
-  include 'install_ruby'
 }
 
 Exec {
@@ -25,13 +24,13 @@ Exec {
 class configure_vim(String $user) {
   require developer
 
-  exec {
-     "sh /vagrant/vim/configure_vim.sh":
+  exec { "install vim plugins":
+      command => "sh /vagrant/vim/configure_vim.sh",
       user => $user   
   }
   ->
-  exec {
-    "cp /vagrant/vim/.vimrc /home/${user}/.vimrc":
+  exec { "copy vimrc":
+      command => "cp /vagrant/vim/.vimrc /home/${user}/.vimrc",
       user => $user
   }
 }
