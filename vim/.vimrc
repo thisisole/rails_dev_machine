@@ -3,7 +3,17 @@ set nocompatible
 scriptencoding utf-8
 set fileencoding=utf-8
 set encoding=utf-8
-set mouse=a
+"set mouse=a
+
+" Let's save undo info!
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo_dir")
+    call mkdir($HOME."/.vim/undo_dir", "", 0700)
+endif
+set undodir=~/.vim/undo_dir
+set undofile
 
 "activate pathogen
 call pathogen#infect()
