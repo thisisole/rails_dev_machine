@@ -6,11 +6,11 @@ set encoding=utf-8
 "set mouse=a
 
 " Let's save undo info!
-if !isdirectory($HOME."/.vim")
-    call mkdir($HOME."/.vim", "", 0770)
+if !isdirectory($HOME.'/.vim')
+    call mkdir($HOME.'/.vim', '', 0770)
 endif
-if !isdirectory($HOME."/.vim/undo_dir")
-    call mkdir($HOME."/.vim/undo_dir", "", 0700)
+if !isdirectory($HOME.'/.vim/undo_dir')
+    call mkdir($HOME.'/.vim/undo_dir', '', 0700)
 endif
 set undodir=~/.vim/undo_dir
 set undofile
