@@ -247,14 +247,16 @@
             "hidden": false,
             "name": "Ubuntu-20.04",
             "source": "Windows.Terminal.Wsl",
+            "commandline" : "wsl.exe ~",
             "colorScheme" : "Solarized Dark Higher Contrast",
             "cursorColor" : "#FFFFFF",
-            "cursorShape" : "bar",
+            "cursorShape" : "underscore",
             "fontFace" : "Consolas",
             "fontSize" : 9, 
             "historySize" : 9001,
             "padding" : "0, 0, 0, 0",
             "snapOnInput" : true,
+            "startingDirectory" : "%USERPROFILE%\\wslhome",
             "useAcrylic" : true
         },
         {
