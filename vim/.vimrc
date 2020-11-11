@@ -3,18 +3,45 @@ set nocompatible
 scriptencoding utf-8
 set fileencoding=utf-8
 set encoding=utf-8
-"set mouse=a
+" set mouse=a
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+ "call vundle#begin('~/some/path/here')
+"
+" " let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'gregsexton/MatchTag'
+Plugin 'Raimondi/delimitMate'
+Plugin 'sjl/gundo.vim'
+Plugin 'preservim/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'tomtom/tlib_vim'
+Plugin 'vim-addon-mw-utils'
+Plugin 'vim-airline/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'elzr/vim-json'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+call vundle#end()   
 
 " Let's save undo info!
 if !isdirectory($HOME.'/.vim')
-    call mkdir($HOME.'/.vim', '', 0770)
+  call mkdir($HOME.'/.vim', '', 0770)
 endif
-if !isdirectory($HOME.'/.vim/undo_dir')
-    call mkdir($HOME.'/.vim/undo_dir', '', 0700)
+if !isdirectory($HOME.'/.vim/undo-dir')
+  call mkdir($HOME.'/.vim/undo-dir', '', 0700)
 endif
-set undodir=~/.vim/undo_dir
-set undofile
-
+set undodir=~/.vim/undo-dir
+set undofile"
 "activate pathogen
 call pathogen#infect()
 
@@ -39,7 +66,7 @@ set backspace=indent,eol,start
 syntax on
 
 set tabstop=2
-set relativenumber      "show line numbers
+set number relativenumber      "show line numbers
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 set wrap        "dont wrap lines
@@ -53,18 +80,11 @@ set expandtab
 set autoindent
 
 "tell the term has 256 colors
-set t_Co=256
+"set t_Co=256
 
 colorscheme solarized
+" colorscheme monokai
 set background=dark
-
-if has ("gui_running")
-    if has("gui_gtk2")
-        set guifont=Inconsolate\ 12
-    elseif has("gui_win32")
-        set guifont=Consolas:h10:cANSI
-    endif
-endif
 
 "settings für syntastic
 set statusline+=%#warningmsg#
@@ -80,8 +100,8 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags noci
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags noci
 
 "if has("autocmd")
-""    autocmd FileType ruby set omnifunc=rubycomplete#Complete
-""    autocmd FileType ruby let g:rubycomplete_buffer_loading=1
+autocmd FileType ruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby let g:rubycomplete_buffer_loading=1
 autocmd FileType ruby let g:rubycomplete_classes_in_global=1
 "endif
 
@@ -90,4 +110,3 @@ nmap =j :%!python -m json.tool<CR>
 
 "fix to show vim airline instant
 set laststatus=2
-
