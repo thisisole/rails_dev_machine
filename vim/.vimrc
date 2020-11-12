@@ -110,3 +110,11 @@ nmap =j :%!python -m json.tool<CR>
 
 "fix to show vim airline instant
 set laststatus=2
+
+
+let g:ctrlp_custom_ignore = {'dir': 'node_modules', }
+
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --no-color -g ""'
+endif
+
