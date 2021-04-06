@@ -1,0 +1,15 @@
+//extensions for VS Code
+{
+	"recommendations": [
+		"ninoseki.vscode-gem-lens",
+		"castwide.solargraph", 
+		"bung87.rails",
+		"aki77.rails-db-schema",
+		"rebornix.ruby",
+		"castwide.solargraph",
+		"sianglim.slim", 
+		"vscodevim.vim",
+		"wingrunr21.vscode-ruby",
+		"vscode-icons-team.vscode-icons"
+	]
+}
